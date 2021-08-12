@@ -1,0 +1,258 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,400;0,500;0,700;0,900;1,400;1,500;1,700;1,900&display=swap");
+/*Colors*/
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  font-family: 'Rubik', sans-serif;
+  font-weight: 400;
+  background-color: #007ea7;
+}
+
+body .main-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 1000px;
+  padding: 100px 0;
+}
+
+body .main-container .team-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+body .pokemon-container {
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  width: 280px;
+  padding: 10px;
+  margin: 5px;
+  background-color: #fffffc;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 15px;
+  -webkit-box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.486);
+          box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.486);
+}
+
+body .pokemon-container .pkm-number-name {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+
+body .pokemon-container img {
+  height: 200px;
+}
+
+.pkm-stats {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.pkm-stats .stat {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 2.5px;
+  background-color: blanchedalmond;
+  border-radius: 8px;
+  height: 40px;
+  width: 40px;
+  -webkit-box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.486);
+          box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.486);
+}
+
+#pkm-types {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 20px;
+  gap: 15px;
+}
+
+#pkm-types .type {
+  border-radius: 8px;
+  background-color: #fffffc;
+  padding: 5px 10px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  -webkit-box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.486);
+          box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.486);
+}
+
+#pkm-types .normal {
+  background-color: #aaaa99;
+}
+
+#pkm-types .fire {
+  background-color: #ff4422;
+}
+
+#pkm-types .water {
+  background-color: #3399ff;
+}
+
+#pkm-types .electric {
+  background-color: #ffcc33;
+}
+
+#pkm-types .grass {
+  background-color: #77cc55;
+}
+
+#pkm-types .ice {
+  background-color: #66ccff;
+}
+
+#pkm-types .fighting {
+  background-color: #bb5544;
+}
+
+#pkm-types .poison {
+  background-color: #aa5599;
+}
+
+#pkm-types .ground {
+  background-color: #ddbb55;
+}
+
+#pkm-types .flying {
+  background-color: #8899ff;
+}
+
+#pkm-types .psychic {
+  background-color: #ff5599;
+}
+
+#pkm-types .bug {
+  background-color: #aabb22;
+}
+
+#pkm-types .rock {
+  background-color: #bbaa66;
+}
+
+#pkm-types .ghost {
+  background-color: #6666bb;
+}
+
+#pkm-types .dragon {
+  background-color: #7766ee;
+}
+
+#pkm-types .dark {
+  background-color: #775544;
+}
+
+#pkm-types .steel {
+  background-color: #aaaabb;
+}
+
+#pkm-types .fairy {
+  background-color: #ee99ee;
+}
+/*# sourceMappingURL=style.css.map */

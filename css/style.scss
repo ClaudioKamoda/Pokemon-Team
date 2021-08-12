@@ -1,0 +1,163 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,400;0,500;0,700;0,900;1,400;1,500;1,700;1,900&display=swap');
+
+/*Colors*/
+$black: #000;
+$white: #fffffc;
+$grey: #007ea7;
+
+$normal: #aaaa99;
+$fire: #ff4422;
+$water: #3399ff;
+$electric: #ffcc33;
+$grass: #77cc55;
+$ice: #66ccff;
+$fighting: #bb5544;
+$poison: #aa5599;
+$ground: #ddbb55;
+$flying: #8899ff;
+$psychic: #ff5599;
+$bug: #aabb22;
+$rock: #bbaa66;
+$ghost: #6666bb;
+$dragon: #7766ee;
+$dark: #775544;
+$steel: #aaaabb;
+$fairy: #ee99ee;
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+@mixin flex($direction, $position) {
+	display: flex;
+	flex-direction: $direction;
+	justify-content: $position;
+	align-items: center;
+}
+
+body {
+	@include flex(column, center);
+	height: fit-content;
+	font-family: 'Rubik', sans-serif;
+	font-weight: 400;
+	background-color: $grey;
+
+	.main-container {
+		@include flex(column, space-around);
+		width: 1000px;
+		padding: 100px 0;
+
+		.team-container {
+			@include flex(row, center);
+			flex-wrap: wrap;
+		}
+	}
+
+	.pokemon-container {
+		height: fit-content;
+		width: 280px;
+		padding: 10px;
+		margin: 5px;
+		background-color: $white;
+		@include flex(column, center);
+		border-radius: 15px;
+		box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.486);
+
+		.pkm-number-name {
+			@include flex(row, space-between);
+			width: 100%;
+			font-weight: 700;
+			font-size: 1.5rem;
+		}
+
+		img {
+			height: 200px;
+		}
+	}
+}
+
+.pkm-stats {
+	@include flex(row, center);
+
+	.stat {
+		@include flex(column, center);
+		margin: 2.5px;
+		background-color: blanchedalmond;
+		border-radius: 8px;
+		height: 40px;
+		width: 40px;
+		box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.486);
+	}
+}
+
+#pkm-types {
+	@include flex(row, center);
+	width: fit-content;
+	padding: 20px;
+	gap: 15px;
+
+	.type {
+		border-radius: 8px;
+		background-color: $white;
+		padding: 5px 10px;
+		width: fit-content;
+		box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.486);
+	}
+
+	.normal {
+		background-color: $normal;
+	}
+	.fire {
+		background-color: $fire;
+	}
+	.water {
+		background-color: $water;
+	}
+	.electric {
+		background-color: $electric;
+	}
+	.grass {
+		background-color: $grass;
+	}
+	.ice {
+		background-color: $ice;
+	}
+	.fighting {
+		background-color: $fighting;
+	}
+	.poison {
+		background-color: $poison;
+	}
+	.ground {
+		background-color: $ground;
+	}
+	.flying {
+		background-color: $flying;
+	}
+	.psychic {
+		background-color: $psychic;
+	}
+	.bug {
+		background-color: $bug;
+	}
+	.rock {
+		background-color: $rock;
+	}
+	.ghost {
+		background-color: $ghost;
+	}
+	.dragon {
+		background-color: $dragon;
+	}
+	.dark {
+		background-color: $dark;
+	}
+	.steel {
+		background-color: $steel;
+	}
+	.fairy {
+		background-color: $fairy;
+	}
+}

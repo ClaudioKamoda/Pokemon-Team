@@ -3,7 +3,7 @@
 /*Colors*/
 $black: #000;
 $white: #fffffc;
-$grey: #007ea7;
+$blue: #007ea7;
 
 $normal: #aaaa99;
 $fire: #ff4422;
@@ -37,44 +37,137 @@ $fairy: #ee99ee;
 	align-items: center;
 }
 
+@mixin cardLimits() {
+	height: 362px;
+	width: 280px;
+	padding: 10px;
+	margin: 5px;
+}
+
 body {
 	@include flex(column, center);
 	height: fit-content;
 	font-family: 'Rubik', sans-serif;
 	font-weight: 400;
-	background-color: $grey;
+	background-color: $blue;
 
 	.main-container {
 		@include flex(column, space-around);
-		width: 1000px;
-		padding: 100px 0;
+		max-width: 1000px;
+		padding: 80px 0;
+
+		h2 {
+			font-size: 1.5rem;
+			font-weight: 500;
+			display: inline-block;
+			margin-bottom: 20px;
+			text-align: center;
+		}
 
 		.team-container {
 			@include flex(row, center);
 			flex-wrap: wrap;
+
+			.pokemon-container {
+				@include cardLimits();
+				background-color: $white;
+				@include flex(column, center);
+				border-radius: 15px;
+				box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.486);
+
+				.pkm-number-name {
+					@include flex(row, space-between);
+					width: 100%;
+					font-weight: 700;
+					font-size: 1.5rem;
+				}
+
+				img {
+					height: 200px;
+				}
+
+				&.hide {
+					display: none;
+					visibility: hidden;
+					opacity: 0;
+				}
+			}
+
+			.plus-container {
+				@include cardLimits();
+				@include flex(row, center);
+
+				p {
+					@include flex(row, center);
+					font-size: 3rem;
+					font-weight: 700;
+					height: 70px;
+					width: 70px;
+					background-color: $white;
+					border-radius: 50%;
+					vertical-align: center;
+
+					&:hover {
+						color: $blue;
+						cursor: pointer;
+					}
+				}
+
+				&.hide {
+					display: none;
+					visibility: hidden;
+					opacity: 0;
+				}
+			}
+
+			.input-container {
+				@include cardLimits();
+				@include flex(row, center);
+
+				.inputs {
+					@include flex(column, space-around);
+					width: 100%;
+					height: 80px;
+					background-color: blueviolet;
+					border-radius: 8px;
+
+					input {
+						width: 90%;
+						height: 30px;
+						font-size: 1rem;
+						border: 1px solid $normal;
+						padding: 5px;
+						margin-top: 5px;
+						border-radius: 5px;
+					}
+
+					.submit {
+						@include flex(row, space-between);
+						width: 90%;
+
+						button {
+							border-radius: 5px;
+							background-color: blue;
+							border: none;
+							padding: 4px 10px;
+							font: 'Rubik', sans-serif;
+							font-size: 1.1rem;
+							font-weight: 500;
+						}
+					}
+				}
+
+				&.hide {
+					display: none;
+					visibility: hidden;
+					opacity: 0;
+				}
+			}
 		}
 	}
 
-	.pokemon-container {
-		height: fit-content;
-		width: 280px;
-		padding: 10px;
-		margin: 5px;
-		background-color: $white;
-		@include flex(column, center);
-		border-radius: 15px;
-		box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.486);
-
-		.pkm-number-name {
-			@include flex(row, space-between);
-			width: 100%;
-			font-weight: 700;
-			font-size: 1.5rem;
-		}
-
-		img {
-			height: 200px;
-		}
+	footer {
+		text-align: center;
 	}
 }
 

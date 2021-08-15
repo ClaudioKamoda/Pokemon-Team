@@ -4,6 +4,7 @@
 $black: #000;
 $white: #fffffc;
 $blue: #007ea7;
+$deeper-blue: #044257;
 
 $normal: #aaaa99;
 $fire: #ff4422;
@@ -46,15 +47,17 @@ $fairy: #ee99ee;
 
 body {
 	@include flex(column, center);
-	height: fit-content;
+	min-height: 100vh;
+	max-height: fit-content;
 	font-family: 'Rubik', sans-serif;
 	font-weight: 400;
 	background-color: $blue;
 
 	.main-container {
-		@include flex(column, space-around);
+		@include flex(column, center);
 		max-width: 1000px;
-		padding: 80px 0;
+		min-height: 80vh;
+		max-height: fit-content;
 
 		h2 {
 			font-size: 1.5rem;
@@ -64,7 +67,25 @@ body {
 			text-align: center;
 		}
 
-		.team-container {
+		button {
+			border: none;
+			padding: 15px;
+			margin: 10px;
+			font-size: 1.2rem;
+			font-weight: 700;
+			border-radius: 10px;
+			transition: 0.3s ease;
+
+			&:hover {
+				padding: 25px;
+				margin: 0;
+				background-color: $deeper-blue;
+				color: $white;
+				cursor: pointer;
+			}
+		}
+
+		#team-container {
 			@include flex(row, center);
 			flex-wrap: wrap;
 
@@ -84,77 +105,6 @@ body {
 
 				img {
 					height: 200px;
-				}
-
-				&.hide {
-					display: none;
-					visibility: hidden;
-					opacity: 0;
-				}
-			}
-
-			.plus-container {
-				@include cardLimits();
-				@include flex(row, center);
-
-				p {
-					@include flex(row, center);
-					font-size: 3rem;
-					font-weight: 700;
-					height: 70px;
-					width: 70px;
-					background-color: $white;
-					border-radius: 50%;
-					vertical-align: center;
-
-					&:hover {
-						color: $blue;
-						cursor: pointer;
-					}
-				}
-
-				&.hide {
-					display: none;
-					visibility: hidden;
-					opacity: 0;
-				}
-			}
-
-			.input-container {
-				@include cardLimits();
-				@include flex(row, center);
-
-				.inputs {
-					@include flex(column, space-around);
-					width: 100%;
-					height: 80px;
-					background-color: blueviolet;
-					border-radius: 8px;
-
-					input {
-						width: 90%;
-						height: 30px;
-						font-size: 1rem;
-						border: 1px solid $normal;
-						padding: 5px;
-						margin-top: 5px;
-						border-radius: 5px;
-					}
-
-					.submit {
-						@include flex(row, space-between);
-						width: 90%;
-
-						button {
-							border-radius: 5px;
-							background-color: blue;
-							border: none;
-							padding: 4px 10px;
-							font: 'Rubik', sans-serif;
-							font-size: 1.1rem;
-							font-weight: 500;
-						}
-					}
 				}
 
 				&.hide {

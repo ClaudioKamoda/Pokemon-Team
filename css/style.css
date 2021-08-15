@@ -21,9 +21,10 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
-  height: fit-content;
+  min-height: 100vh;
+  max-height: -webkit-fit-content;
+  max-height: -moz-fit-content;
+  max-height: fit-content;
   font-family: 'Rubik', sans-serif;
   font-weight: 400;
   background-color: #007ea7;
@@ -37,13 +38,17 @@ body .main-container {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   max-width: 1000px;
-  padding: 80px 0;
+  min-height: 80vh;
+  max-height: -webkit-fit-content;
+  max-height: -moz-fit-content;
+  max-height: fit-content;
 }
 
 body .main-container h2 {
@@ -54,7 +59,26 @@ body .main-container h2 {
   text-align: center;
 }
 
-body .main-container .team-container {
+body .main-container button {
+  border: none;
+  padding: 15px;
+  margin: 10px;
+  font-size: 1.2rem;
+  font-weight: 700;
+  border-radius: 10px;
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
+}
+
+body .main-container button:hover {
+  padding: 25px;
+  margin: 0;
+  background-color: #044257;
+  color: #fffffc;
+  cursor: pointer;
+}
+
+body .main-container #team-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -72,7 +96,7 @@ body .main-container .team-container {
       flex-wrap: wrap;
 }
 
-body .main-container .team-container .pokemon-container {
+body .main-container #team-container .pokemon-container {
   height: 362px;
   width: 280px;
   padding: 10px;
@@ -96,7 +120,7 @@ body .main-container .team-container .pokemon-container {
           box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.486);
 }
 
-body .main-container .team-container .pokemon-container .pkm-number-name {
+body .main-container #team-container .pokemon-container .pkm-number-name {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -115,147 +139,11 @@ body .main-container .team-container .pokemon-container .pkm-number-name {
   font-size: 1.5rem;
 }
 
-body .main-container .team-container .pokemon-container img {
+body .main-container #team-container .pokemon-container img {
   height: 200px;
 }
 
-body .main-container .team-container .pokemon-container.hide {
-  display: none;
-  visibility: hidden;
-  opacity: 0;
-}
-
-body .main-container .team-container .plus-container {
-  height: 362px;
-  width: 280px;
-  padding: 10px;
-  margin: 5px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-body .main-container .team-container .plus-container p {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  font-size: 3rem;
-  font-weight: 700;
-  height: 70px;
-  width: 70px;
-  background-color: #fffffc;
-  border-radius: 50%;
-  vertical-align: center;
-}
-
-body .main-container .team-container .plus-container p:hover {
-  color: #007ea7;
-  cursor: pointer;
-}
-
-body .main-container .team-container .plus-container.hide {
-  display: none;
-  visibility: hidden;
-  opacity: 0;
-}
-
-body .main-container .team-container .input-container {
-  height: 362px;
-  width: 280px;
-  padding: 10px;
-  margin: 5px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-body .main-container .team-container .input-container .inputs {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  width: 100%;
-  height: 80px;
-  background-color: blueviolet;
-  border-radius: 8px;
-}
-
-body .main-container .team-container .input-container .inputs input {
-  width: 90%;
-  height: 30px;
-  font-size: 1rem;
-  border: 1px solid #aaaa99;
-  padding: 5px;
-  margin-top: 5px;
-  border-radius: 5px;
-}
-
-body .main-container .team-container .input-container .inputs .submit {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  width: 90%;
-}
-
-body .main-container .team-container .input-container .inputs .submit button {
-  border-radius: 5px;
-  background-color: blue;
-  border: none;
-  padding: 4px 10px;
-  font: 'Rubik', sans-serif;
-  font-size: 1.1rem;
-  font-weight: 500;
-}
-
-body .main-container .team-container .input-container.hide {
+body .main-container #team-container .pokemon-container.hide {
   display: none;
   visibility: hidden;
   opacity: 0;

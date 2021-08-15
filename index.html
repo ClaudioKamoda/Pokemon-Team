@@ -9,8 +9,11 @@
 	</head>
 	<body>
 		<div class="main-container">
-			<h2>CHOOSE YOUR POKÉMON TEAM OR GET A RANDOM ONE</h2>
-			<div class="team-container">
+			<h2>GET A RANDOM POKÉMON TEAM:</h2>
+			<button id="getTeam">
+				GET A RANDOM TEAM!
+			</button>
+			<div id="team-container">
 				<div class="pokemon-container hide">
 					<div class="pkm-number-name">
 						<p id="pkm-number">#001</p>
@@ -52,22 +55,11 @@
 						</div>
 					</div>
 				</div>
-				<div class="plus-container">
-					<p id="plus-sign">+</p>
-				</div>
-				<div class="input-container hide">
-					<div class="inputs">
-						<input type="search" name="pokemon-search" id="search" placeholder="Type the Pokémon name">
-						<div class="submit">
-							<p>Pokémon not valid</p>
-							<button>ADD</button>
-						</div>
-					</div>
-				</div>
 			</div>
 		</div>
 		<footer>Made with ❤ by Claudio, 2021.</br>If you have a design for this app, please contact me. Design isn't my best.</footer>
 
+		<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 		<script src="main.js"></script>
 	</body>
 </html>

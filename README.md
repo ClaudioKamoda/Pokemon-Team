@@ -1,10 +1,10 @@
 # Pokemon Team
 
-Build your Pokémon team and see some details about them. Built using HTML, Sass, JS and _Poké API_.
+Get a random Pokémon team with a click of a button and see some details about them. Built using HTML, Sass, JS and _Poké API_.
 
 ## User Stories
 
--   [ ] The user can choose to get a random team by pressing a button.
+-   [x] The user can choose to get a random team by pressing a button.
 
 #### August 11, 2021
 
@@ -12,5 +12,13 @@ Build your Pokémon team and see some details about them. Built using HTML, Sass
 
 #### August 15, 2021
 
-- Decided that the application will only return a random team.
-- Started handling the javascript logic to connect to the api.
+-   Decided that the application will only return a random team.
+-   Started handling the javascript logic to connect to the api.
+
+#### August 16, 2021
+
+-   Coded the logic for the requests.
+-   Fixed a bug regarding size of the Pokémon name by adjusting the size of the cards.
+-   Commented the card code in the html file so it is there but doesn't influence the application.
+
+![Use cases](https://github.com/ClaudioKamoda/Pokemon-Team/blob/main/Gif/pokemon.gif)

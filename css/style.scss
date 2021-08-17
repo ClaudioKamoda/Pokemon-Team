@@ -39,7 +39,7 @@ $fairy: #ee99ee;
 }
 
 @mixin cardLimits() {
-	height: 362px;
+	height: 382px;
 	width: 280px;
 	padding: 10px;
 	margin: 5px;
@@ -63,7 +63,7 @@ body {
 			font-size: 1.5rem;
 			font-weight: 500;
 			display: inline-block;
-			margin-bottom: 20px;
+			margin: 20px 0;
 			text-align: center;
 		}
 
@@ -101,6 +101,10 @@ body {
 					width: 100%;
 					font-weight: 700;
 					font-size: 1.5rem;
+
+					#pkm-name {
+						text-align: right;
+					}
 				}
 
 				img {
@@ -118,6 +122,7 @@ body {
 
 	footer {
 		text-align: center;
+		padding: 20px 20px;
 	}
 }
 

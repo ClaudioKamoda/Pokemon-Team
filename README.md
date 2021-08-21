@@ -2,7 +2,7 @@
 
 Get a random Pokémon team with a click of a button and see some details about them. Built using HTML, Sass, JS and _Poké API_.
 
-More details on the implementation you can check it (here)[https://medium.com/@claudiojlf/the-decisions-behind-random-pok%C3%A9mon-team-generator-b833f2ac36fe]
+More details on the implementation you can check it [here](https://medium.com/@claudiojlf/the-decisions-behind-random-pok%C3%A9mon-team-generator-b833f2ac36fe)
 
 ## User Stories
 

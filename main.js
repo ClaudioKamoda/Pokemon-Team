@@ -15,8 +15,6 @@ buttonGetTeam.addEventListener('click', () => {
 			return makeRequest(pokemonNumber)
 		})
 	).then(function (results) {
-		console.log(results)
-
 		dataToShow = results.map(info => {
 			let types = []
 
